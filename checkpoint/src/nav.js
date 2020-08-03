@@ -1,21 +1,24 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import './App.css';
+
 
 function nav() {
 
   const navStyle={
-      color:'white'
+      color:'white',
+      textDecoration:"none",
+
+
   }
   return (
-    <nav>
+    
       <ul className="nav-links">
-          <Link style={navStyle} to= "/home">
-          <li>Home</li>
-          </Link>
-          <Link style={navStyle} to ="/category">
-          <li>Category</li>
-          </Link>
+          
+          <li><Link style={navStyle} to= "/home">Home</Link></li>
+       
+          
+          <li><Link style={navStyle} to ="/category">Category </Link></li>
+         
           <Link style={navStyle} to ="/products">
           <li>Products</li>
           </Link>
@@ -23,7 +26,7 @@ function nav() {
           <li>Admin Area</li>
           </Link>
       </ul>
-    </nav>
+  
   );
 }
 

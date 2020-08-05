@@ -13,25 +13,25 @@ import {BrowserRouter as Router, Switch,Route} from 'react-router-dom'
 import './App.css';
 import AdminRoutes from './AdminRoutes';
 
-function App() {
-  
+
+function App(props) {
+ 
   return (
     <Router>
     <div>
       <Nav />
       <Route path="/home" component={Home}/>
       <Route path="/category" component={Category}></Route>
-     <div style={{display:"flex", justifyContent:"space-around"}}>
-      <Route path="/products" component={Products}></Route>
-      <AdminRoutes />
+     
+     <Route path="/products" component={Products}/>
+      {/* <AdminRoutes /> */}
       </div>
       <Route path="/adminArea" exact component={AdminArea}></Route>
       <Route path="/adminArea/logged" exact component={Loged}></Route>
       <Route path="/category/shoes" component={Shoes}></Route>
       <Route path="/category/boots" component={Boots}></Route>
       <Route path="/category/footwear" component={Footwear}></Route>
-    
-   </div>
+
     
     </Router>
   );
